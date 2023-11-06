@@ -1,0 +1,4 @@
+<div *ngFor="let emprunteur of emprunteurs" (click)="openEmprunteurDetails(emprunteur)">
+  <app-emprunteur-details [emprunteur]="emprunteur"></app-emprunteur-details>
+</div>
+<button (click)="openCreateEmprunteur()">Créer</button>

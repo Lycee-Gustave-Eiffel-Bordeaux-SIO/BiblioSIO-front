@@ -1,0 +1,10 @@
+<form (ngSubmit)="edit()">
+    <label for="revue">Revue</label><select [(ngModel)]="exemplaire.revue" id="revue" name="revue">
+        <option *ngFor="let revue of revues$ | async" [ngValue]="revue">{{revue.titre}}</option>
+    </select>
+    <label for="titre">Titre :</label><input [(ngModel)]="exemplaire.titre" id="titre" name="titre">
+    <label for="moisParution">Mois de parution :</label><input [(ngModel)]="exemplaire.moisParution" id="moisParution" name="moisParution">
+    <label for="anneeParution">Année de parution :</label><input [(ngModel)]="exemplaire.anneeParution" id="anneeParution" name="anneeParution">
+    <label for="statut">Statut :</label><input type="checkbox" [(ngModel)]="exemplaire.statut" id="statut" name="statut">
+    <button type="submit">Envoyer</button><button type="reset">Reset</button>
+</form>

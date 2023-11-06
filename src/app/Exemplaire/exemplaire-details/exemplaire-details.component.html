@@ -1,0 +1,10 @@
+<div class="exemplaire">
+    <p>{{exemplaire.titre}}</p>
+    <p>{{exemplaire.moisParution}}</p>
+    <p>{{exemplaire.anneeParution}}</p>
+    <p>{{statut()}}</p>
+</div>
+<div class="controls">
+    <button (click)="update()">Modifier</button>
+    <button (click)="delete()">Supprimer</button>
+</div>

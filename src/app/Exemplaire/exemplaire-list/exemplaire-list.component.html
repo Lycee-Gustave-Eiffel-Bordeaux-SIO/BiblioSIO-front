@@ -1,0 +1,4 @@
+<div *ngFor="let exemplaire of exemplaires" (click)="openExemplaireDetails(exemplaire)">
+    <app-exemplaire-details [exemplaire]="exemplaire"></app-exemplaire-details>
+</div>
+<button (click)="openCreateExemplaire()">Créer</button>

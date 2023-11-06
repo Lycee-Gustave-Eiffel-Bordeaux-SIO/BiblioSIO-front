@@ -1,0 +1,4 @@
+<div *ngFor="let emprunt of emprunts" (click)="openEmpruntDetails(emprunt)">
+    <app-emprunt-details [emprunt]="emprunt"></app-emprunt-details>
+</div>
+<button (click)="openCreateEmprunt()">Créer</button>
