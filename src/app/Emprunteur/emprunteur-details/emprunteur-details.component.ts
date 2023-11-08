@@ -11,6 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class EmprunteurDetailsComponent {
 
   @Input() emprunteur!: Emprunteur
+  @Input() solo: boolean = true
 
   constructor(
       private emprunteurService: EmprunteurService,
@@ -28,6 +29,7 @@ export class EmprunteurDetailsComponent {
             .subscribe(emprunteur=>this.emprunteur=emprunteur)
       }
     }
+    this.solo=history.state.solo
   }
 
   delete(){

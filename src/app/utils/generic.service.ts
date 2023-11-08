@@ -14,7 +14,7 @@ export class GenericService<T> {
   protected className = "Generic"
   private needRefresh: boolean = true
   private lastRefresh: number = Date.now()
-  private DELAY: number = 120000
+  private DELAY: number = 30000
   protected entities: T[] = []
   constructor(
     protected http: HttpClient

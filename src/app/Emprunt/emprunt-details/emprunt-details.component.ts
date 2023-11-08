@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class EmpruntDetailsComponent {
   @Input() emprunt!: Emprunt
+  @Input() solo: boolean = true
 
   constructor(
       private empruntService: EmpruntService,
@@ -25,6 +26,7 @@ export class EmpruntDetailsComponent {
             .subscribe(emprunt=>this.emprunt=emprunt)
       }
     }
+    this.solo=history.state.solo
   }
 
   delete(){

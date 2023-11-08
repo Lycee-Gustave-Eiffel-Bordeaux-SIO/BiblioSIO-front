@@ -28,6 +28,9 @@ export class ExemplaireEditorComponent {
       this.exemplaire=history.state.exemplaire
     }
     this.creating = history.state.creating
+    if(this.creating) {
+      this.exemplaire.statut=true;
+    }
     this.updating = history.state.updating
     this.revues$=this.revueService.get()
   }

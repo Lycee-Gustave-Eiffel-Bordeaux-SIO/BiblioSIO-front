@@ -10,6 +10,7 @@ import {ExemplaireService} from "../exemplaire.service";
 })
 export class ExemplaireDetailsComponent {
   @Input() exemplaire!: Exemplaire
+  @Input() solo: boolean = true
 
   constructor(
       private exemplaireService: ExemplaireService,
@@ -25,6 +26,7 @@ export class ExemplaireDetailsComponent {
             .subscribe(exemplaire=>this.exemplaire=exemplaire)
       }
     }
+    this.solo=history.state.solo
   }
 
   delete(){

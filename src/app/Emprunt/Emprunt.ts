@@ -1,7 +1,9 @@
+import {SerializedUrlObject} from "../utils/SerializedUrlObject";
+
 export interface Emprunt {
   id: Number,
-  emprunteur: Record<'id'|'url', String>,
-  exemplaire: Record<'id'|'url', String>,
+  emprunteur: SerializedUrlObject,
+  exemplaire: SerializedUrlObject,
   dateEmprunt: Date,
   dateEcheance: Date,
   dateRetour: Date,

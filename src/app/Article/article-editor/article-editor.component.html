@@ -1,3 +1,4 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un article : </h1>
 <form (ngSubmit)="edit()">
     <label for="exemplaire">Exemplaire</label><select [(ngModel)]="article.exemplaire" id="exemplaire" name="exemplaire">
         <option *ngFor="let exemplaire of exemplaires$ | async" [ngValue]="exemplaire">{{exemplaire.titre}}</option>

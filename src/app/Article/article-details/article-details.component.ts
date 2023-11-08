@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ArticleDetailsComponent {
   @Input() article!: Article
+  @Input() solo: boolean = true
 
   constructor(
       private articleService: ArticleService,
@@ -25,6 +26,7 @@ export class ArticleDetailsComponent {
             .subscribe(article=>this.article=article)
       }
     }
+    this.solo=history.state.solo
   }
 
   delete(){

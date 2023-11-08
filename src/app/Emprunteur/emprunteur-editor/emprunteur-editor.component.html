@@ -1,3 +1,4 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un emprunteur : </h1>
 <form (ngSubmit)="edit()">
     <label for="nom">Nom :</label><input [(ngModel)]="emprunteur.nom" id="nom" name="nom">
     <label for="prenom">Prénom :</label><input [(ngModel)]="emprunteur.prenom" id="prenom" name="prenom">

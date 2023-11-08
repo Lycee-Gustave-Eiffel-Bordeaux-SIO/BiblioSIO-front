@@ -1,8 +1,13 @@
-<div class="article">
+<h1 *ngIf="solo">Détail article : </h1>
+<article>
+  <div class="entity">
     <p>{{article.titre}}</p>
     <p>{{article.description}}</p>
-</div>
-<div class="controls">
+    <a [href]="article.exemplaire.url">{{article.exemplaire.value}}</a>
+  </div>
+  <div class="controls">
     <button (click)="update()">Modifier</button>
     <button (click)="delete()">Supprimer</button>
-</div>
+  </div>
+</article>
+

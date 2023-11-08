@@ -23,7 +23,7 @@ export class RevueListComponent {
 
   openRevueDetails(revue: Revue) {
     this.router.navigate(['/revues/'+revue.id],
-        {state: {revue: revue}})
+        {state: {revue: revue, solo: true}})
   }
 
   openCreateRevue() {

@@ -1,3 +1,5 @@
+import {SerializedUrlObject} from "../utils/SerializedUrlObject";
+
 export interface Emprunteur {
   id: Number
   nom: string
@@ -5,7 +7,7 @@ export interface Emprunteur {
   mail: string
   promo: string
   classe: Classe
-  emprunts: Record<'id'|'url', string>[]
+  emprunts: SerializedUrlObject[]
 }
 export enum Classe {
   SIO1A = "SIO1A",

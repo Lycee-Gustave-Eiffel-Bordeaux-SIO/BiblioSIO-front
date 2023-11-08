@@ -1,3 +1,4 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un emprunt : </h1>
 <form (ngSubmit)="edit()" #myForm="ngForm">
     <label for="emprunteur">Emprunteur</label><select [(ngModel)]="emprunt.emprunteur" id="emprunteur" name="emprunteur">
         <option *ngFor="let emprunteur of emprunteurs$ | async" [ngValue]="emprunteur">{{emprunteur.nom +" "+ emprunteur.prenom}}</option>

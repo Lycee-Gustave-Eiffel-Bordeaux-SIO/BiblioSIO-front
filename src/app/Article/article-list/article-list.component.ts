@@ -22,7 +22,7 @@ export class ArticleListComponent {
 
   openArticleDetails(article: Article) {
     this.router.navigate(['/articles/'+article.id],
-        {state: {article: article}})
+        {state: {article: article, solo: true}})
   }
 
   openCreateArticle() {

@@ -1,9 +1,11 @@
+import {SerializedUrlObject} from "../utils/SerializedUrlObject";
+
 export interface Exemplaire {
   id: Number,
-  revue: Record<'id'|'url', String>,
+  revue: SerializedUrlObject,
   titre: String,
   moisParution: String,
   anneeParution: String,
-  articles: Record<'id'|'url', String>[],
+  articles: SerializedUrlObject[],
   statut: Boolean
 }

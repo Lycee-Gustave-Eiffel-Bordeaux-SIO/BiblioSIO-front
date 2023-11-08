@@ -22,7 +22,7 @@ export class EmpruntListComponent {
 
   openEmpruntDetails(emprunt: Emprunt) {
     this.router.navigate(['/emprunts/'+emprunt.id],
-        {state: {emprunt: emprunt}})
+        {state: {emprunt: emprunt, solo: true}})
   }
 
   openCreateEmprunt() {

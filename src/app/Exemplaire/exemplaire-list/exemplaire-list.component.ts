@@ -22,7 +22,7 @@ export class ExemplaireListComponent {
 
   openExemplaireDetails(exemplaire: Exemplaire) {
     this.router.navigate(['/exemplaires/'+exemplaire.id],
-        {state: {exemplaire: exemplaire}})
+        {state: {exemplaire: exemplaire, solo: true}})
   }
 
   openCreateExemplaire() {

@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class RevueDetailsComponent {
   @Input() revue!: Revue
+  @Input() solo: boolean = true
 
   constructor(
       private revueService: RevueService,
@@ -25,6 +26,7 @@ export class RevueDetailsComponent {
             .subscribe(revue=>this.revue=revue)
       }
     }
+    this.solo=history.state.solo
   }
 
   delete(){

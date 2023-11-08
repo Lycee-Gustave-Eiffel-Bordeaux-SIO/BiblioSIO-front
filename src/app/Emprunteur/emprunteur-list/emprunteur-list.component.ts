@@ -23,7 +23,7 @@ export class EmprunteurListComponent {
 
   openEmprunteurDetails(emprunteur: Emprunteur) {
     this.router.navigate(['/emprunteurs/'+emprunteur.id],
-        {state: {emprunteur: emprunteur}})
+        {state: {emprunteur: emprunteur, solo: true}})
   }
 
   openCreateEmprunteur() {
